@@ -1,9 +1,11 @@
 import React from 'react'
+import { Loader } from './Loader.styled'
 
 export const Loader = () => {
   return (
-    <div>
-        <span></span>
-    </div>
+    <Loader>
+    </Loader>
   )
 }
+
+

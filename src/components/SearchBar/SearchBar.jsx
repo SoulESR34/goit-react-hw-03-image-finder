@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Header, HeaderConteiner, Input, SearchButton } from './searchBar.styled';
+
 
 export const SearchBar = ({ searchEngine }) => {
   const submitRequest = e => {
@@ -28,3 +30,8 @@ export const SearchBar = ({ searchEngine }) => {
     </Header>
   );
 };
+
+SearchBar.protoTypes = {
+  searchEngine: PropTypes.func.isRequired
+}
+

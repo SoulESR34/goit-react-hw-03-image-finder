@@ -4,6 +4,7 @@ import { MainContainer } from './App.styled';
 import { ImageGallery } from '../ImageGallery/ImageGallery';
 import { Photos } from 'services/Photos.service';
 import { Error } from '../Error/Error';
+import { Loader } from 'components/Loader/Loader.styled';
 import { Modal } from '../Modal/Modal';
 import { ButtonLoadMore } from '../ButtonLoadMore/ButtonLoadMore';
 
@@ -32,10 +33,9 @@ export class App extends Component {
   // (Search = query in string, Page = Pagination of load)
   requestPhotos = async (search = '', page = 1, typeRequest = 'get') => {
     this.setState({ loading: true, saveSearch: search, pageNum: page });
-
     try {
-      // request and save
-      const gallery = await Photos(search, page);
+      // request 
+      const gallery = await Photos(search, page)
       this.savePhotos(gallery.hits, typeRequest);
     } catch (error) {
       this.setState({ error: true });
@@ -78,6 +78,7 @@ export class App extends Component {
         <SearchBar searchEngine={this.requestPhotos}></SearchBar>
         <main>
           <MainContainer className="container">
+            {this.state.loading && <Loader></Loader>}
             {error ? (
               <Error></Error>
             ) : (
