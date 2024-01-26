@@ -9,7 +9,7 @@ const spinLoader = keyframes`
     }
 `
 
-export const Loader = styled.div`
+export const LoaderIcon = styled.div`
     width: 50px;
     height: 50px;
     border: 6px solid #00000050;
