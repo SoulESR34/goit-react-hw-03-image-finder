@@ -4,7 +4,7 @@ import { MainContainer } from './App.styled';
 import { ImageGallery } from '../ImageGallery/ImageGallery';
 import { Photos } from 'services/Photos.service';
 import { Error } from '../Error/Error';
-import { Loader } from 'components/Loader/Loader.styled';
+import Loader from 'components/Loader/Loader';
 import { Modal } from '../Modal/Modal';
 import { ButtonLoadMore } from '../ButtonLoadMore/ButtonLoadMore';
 

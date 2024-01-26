@@ -1,11 +1,8 @@
-import React from 'react'
-import { LoaderIcon } from './Loader.styled'
+import React from 'react';
+import { LoaderIcon } from './Loader.styled';
 
-export const Loader = () => {
-  return (
-    <LoaderIcon>
-    </LoaderIcon>
-  )
-}
+const Loader = () => {
+  return <LoaderIcon></LoaderIcon>;
+};
 
-
+export default Loader;
